@@ -26,13 +26,15 @@ else
 --- exports
 -- @table exports
 -- @tfield string tag the last versions git tag
--- @tfield string web the repo web URL
--- @tfield string repo the git repo URL
+-- @tfield string repo the repo web URL
+-- @tfield string git the git repo URL
+-- @tfield string web the project web URL
 -- @tfield string release the web URL of this release
 {
   tag: "${TAG}"
-  web: "https://github.com/s-ol/alive"
-  repo: "https://github.com/s-ol/alive.git"
+  repo: "https://github.com/s-ol/alive"
+  git: "https://github.com/s-ol/alive.git"
+  web: "https://alv.s-ol.nu"
   release: "https://github.com/s-ol/alive/releases/tag/${TAG}"
 }
 EOF
@@ -90,7 +92,8 @@ $(list_modules alv-lib)
     },
     bin = {
       "bin/alv",
-      "bin/alv-wx"
+      "bin/alv-wx",
+      "bin/alv-fltk",
     },
   },
 }
